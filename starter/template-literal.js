@@ -20,3 +20,4 @@ console.log('Je vis en ' + country); // solution équivalente avec des concatén
 const x = 3;
 const y = 7;
 console.log(`${x} + ${y} = ${x + y}`); // "3 + 7 = 10"
+

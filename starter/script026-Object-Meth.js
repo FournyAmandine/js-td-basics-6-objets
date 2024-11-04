@@ -12,20 +12,33 @@ const aurora = {
 
 // Affiche "… a … points de vie et … en force"
 
+console.log(`${aurora.nom} a ${aurora.sante} points de vie et ${aurora.force} en force `)
+
 // Crée une fonction décrire qui prend personnage en paramètre et renvoie la description du personnage
 // écris ta fonction décrire ici
 
+function decrire(){
+    return `${aurora.nom} a ${aurora.sante} points de vie et ${aurora.force} en force `;
+}
+
 // Utilise cette fonction pour afficher la description d'Aurora
 
+console.log(decrire());
+
 // Ajoute à présent cette fonction à l'intérieur de l'objet aurora
-const aurora = {
+const aurore = {
     nom: "Aurora",
     sante: 150,
     force: 25,
     // renvoie la description du personnage
     // écris ton code ici
+    decrire() {
+        return `${this.nom} a ${this.sante} points de vie et ${this.force} en force`;
+    }
 };
 // Utilise à présent cette méthode pour afficher la description d'Aurora
+
+console.log(aurore.decrire())
 
 /*
 EXERCICE 1 : Ajoute une méthode calcAge à john qui calcule son âge
@@ -38,9 +51,10 @@ var john = {
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
     job: 'teacher',
     isMarried: false,
-    calcAge: function() {
-        return this.age = 2019 - this.birthYear;
-    }
+    calcAge() {
+        this.age = 2024 - this.birthYear;
+        return this.age;
+    },
 };
 console.log(john);
 console.log(john.calcAge());
@@ -76,3 +90,13 @@ Les objets et la manière de les utiliser se trouvent dans la DOCUMENTATION
 Par exemple, pour l'objet Array :
 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array
 */
+
+const rectangle = {
+    longueur : 5,
+    largeur : 3,
+    calcSurface(){
+        return this.longueur*this.largeur;
+    }
+}
+
+console.log(rectangle.calcSurface());
